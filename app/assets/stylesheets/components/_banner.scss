@@ -5,6 +5,13 @@
   width: -webkit-fill-available;
 }
 
+.banner_product {
+  background-size: cover;
+  background-position: center;
+  padding: 42vh 0;
+  width: -webkit-fill-available;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
@@ -14,6 +21,21 @@
 }
 
 .banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner_product h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner_product p {
   font-size: 20px;
   color: white;
   opacity: .7;
