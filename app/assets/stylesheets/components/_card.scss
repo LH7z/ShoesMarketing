@@ -1,8 +1,46 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
   padding: 25px 15px;
+  grid-gap: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card_image_product {
+  height: 180px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card_product_info {
+  padding: 15px;
+  width: fit-content;
+}
+
+.card-category-product {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: 24px;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-pro-p {
+  font-size: 20px;
+  margin: 5px 0px;
+  font-weight: lighter;
+  overflow-wrap: anywhere;
 }
 
 .card-category {
