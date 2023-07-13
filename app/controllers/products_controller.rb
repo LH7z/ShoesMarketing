@@ -1,11 +1,16 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: %i[show edit update destroy]
+
   def index
     @products = Product.all
   end
 
+  def show
+  end
+
   def new
     @product = Product.new
-    @user = current_user
+    @product.user = current_user
   end
 
   def create
@@ -13,13 +18,19 @@ class ProductsController < ApplicationController
     @product.user = current_user
 
     if @product.save
-      redirect_to profile_path, notice: "project was successfully created."
+      redirect_to products_path, notice: "project was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+  private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
   def product_params
-    params.require(:product).permit(:name, :description, :price, :rating, :image)
+    params.require(:product).permit(:name, :description, :price, :rating, :photo)
   end
 end

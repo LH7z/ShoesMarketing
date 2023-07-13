@@ -1,0 +1,25 @@
+<a href="<%= product_path(product) %>">
+  <div class="card-category-product">
+  <%= cl_image_tag product.photo.key, :class => "card_image_product"%>
+  <div class="card_product_info">
+    <p class="card-pro-p">
+      Name:
+      <%= product.name %>
+    </p>
+    <p class="card-pro-p">
+        Description:
+        <%= product.description %>
+    </p>
+    <p class="card-pro-p">
+      price:
+      $<%= product.price %>
+    </p>
+    <p class="card-pro-p">
+      rating:
+      <% product.rating.to_i.times do %>
+        <i class="fa-solid fa-star"></i>
+      <% end %>
+    </p>
+  </div>
+  </div>
+</a>
