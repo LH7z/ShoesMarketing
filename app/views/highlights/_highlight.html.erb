@@ -1,0 +1,15 @@
+<a href="#">
+  <div data-carousel-target="items" class="card-category-highlight">
+  <%= cl_image_tag highlight.photo.key, :class => "card_image_product"%>
+  <div class="card_product_info">
+    <p class="card-pro-p">
+      Name:
+      <%= highlight.name %>
+    </p>
+    <p class="card-pro-p">
+        Description:
+        <%= highlight.description %>
+    </p>
+  </div>
+  </div>
+</a>

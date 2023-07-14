@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @highlights = Highlight.all
   end
 
   def show
