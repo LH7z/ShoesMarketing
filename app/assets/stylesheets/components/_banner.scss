@@ -5,11 +5,31 @@
   width: -webkit-fill-available;
 }
 
+
 .banner_product {
   background-size: cover;
   background-position: center;
-  padding: 42vh 0;
+  height: 76vh;
   width: -webkit-fill-available;
+}
+
+.banner_product_2 {
+  margin: 10vh auto;
+  width: fit-content;
+}
+
+.banner_product_2 h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 74px;
+  margin: 0;
+}
+
+.banner_product_2 h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  margin: 0;
 }
 
 .banner h1 {
