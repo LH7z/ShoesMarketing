@@ -1,22 +1,12 @@
 <div class="banner_product_2">
+  <h1>Sneaker Shopping</h1>
   <h2>The best place to buy</h2>
-  <h1>Shoes Marketing</h1>
 </div>
 
-<div class="banner_product" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-
+<div class="banner_product">
 </div>
 
-<h2 class="sections_h2">Highlights</h2>
-<hr>
-<div data-controller="carousel" class="highlights">
-  <% @highlights.each do |highlight| %>
-    <%= render "highlights/highlight", highlight: highlight %>
-  <% end %>
-</div>
 
-<h2 class="sections_h2">Our products</h2>
-<hr>
 <div class="cards">
   <% @products.each do |product| %>
     <%= render "product", product: product %>

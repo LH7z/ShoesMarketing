@@ -1,0 +1,25 @@
+ <div class="card-category-show">
+  <%= cl_image_tag @product.photo.key, :class => "card_image_show"%>
+  <div class="card_show_info">
+    <div class="card_show_title">
+      <h2>
+        <%= @product.name %>
+      </h2>
+      <p>
+          <%= @product.description %>
+      </p>
+    </div>
+    <div class="card_show_prices">
+      <p>
+        price:
+        $<%= @product.price %>
+      </p>
+      <p>
+        rating:
+        <% @product.rating.to_i.times do %>
+          <i class="fa-solid fa-star"></i>
+        <% end %>
+      </p>
+    </div>
+  </div>
+  </div>

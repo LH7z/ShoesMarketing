@@ -1,0 +1,60 @@
+
+#slide {
+  background: linear-gradient(to right, transparent, black), url(https://img.buzzfeed.com/buzzfeed-static/images/ZmxfbG9zc3kscV9hdXRv/cc5dvskqjobawc4mbygl/sneakerheads-feature.jpeg.jpeg?downsize=900:*&output-format=auto&output-quality=auto);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.slide-info {
+  margin: 235px 35vw 0;
+  color: #ffffff9c;
+  width: 56vw;
+}
+
+.slide-info h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 74px;
+  text-align: end;
+}
+
+.slide-info h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: end;
+  overflow-wrap: anywhere;
+}
+
+#slide-2 {
+  background: linear-gradient(to left, transparent, black), url(https://i.guim.co.uk/img/media/0bfa4ab2649f4d61decbe63fcf11d8e96d951974/0_56_1215_729/master/1215.jpg?width=1200&quality=85&auto=format&fit=max&s=f12c6f83f375494aca656cdcc857dfbf);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-2-info {
+  margin: 20px 8vw 0;
+  color: #ffffff9c;
+  width: 56vw;
+}
+
+.slide-2-info h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 74px;
+
+}
+
+.slide-2-info h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+
+#slide-3 {
+  background: linear-gradient(to right, transparent, black), url(https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-10/211022-earl-west-sneakerhead-mn-1515-340ac1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

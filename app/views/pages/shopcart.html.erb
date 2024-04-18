@@ -1,0 +1,10 @@
+<div class="profile-card">
+  <div class="profile-photo">
+    <%= cl_image_tag (@user.photo.key) %>
+  </div>
+  <div class="profile-infos">
+    <h1 class="profile-name">
+      <%= @user.nickname %> Shop's Cart
+    </h1>
+  </div>
+</div>

@@ -18,6 +18,11 @@
   border-radius: 4px;
   background: #670BFF;
   transition: background 0.3s ease;
+  margin-top: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  padding: 9px 42px;
 }
 
 .btn-flat:hover {
@@ -38,4 +43,9 @@
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+.btn {
+
+  border: 1px solid #aeb1b3;
 }

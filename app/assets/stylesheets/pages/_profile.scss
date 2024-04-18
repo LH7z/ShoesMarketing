@@ -1,0 +1,23 @@
+.profile-card{
+  margin: 96px 15px;
+  height: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.profile-card img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.profile-infos {
+  padding: 25px;
+}
+
+.profile-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+}
