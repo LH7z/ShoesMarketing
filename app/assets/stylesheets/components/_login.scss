@@ -1,0 +1,15 @@
+.container-login {
+  margin: 100px auto;
+  background-color: white;
+  padding: 25px 25px;
+  width: 70%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.login-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
