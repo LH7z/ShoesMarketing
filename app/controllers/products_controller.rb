@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
         @products = Product.where(categories: params[:sort_cat])
       end
     elsif params[:query].present?
-      @products = @products.name_or_description(params[:query])
+      @products = Product.name_or_description(params[:query])
     else
       @products = Product.all
     end
