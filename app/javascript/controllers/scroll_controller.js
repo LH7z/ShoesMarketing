@@ -18,7 +18,7 @@ export default class extends Controller {
         this.oldScroll = this.scrollY;
       }
     };
-  };
+};
 
 
 

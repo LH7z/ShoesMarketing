@@ -1,0 +1,61 @@
+<div style="padding-top: 90px">
+  <% if @cart.line_items.present? %>
+    <% @cart.line_items.each do |line_item| %>
+      <div class="cart">
+        <div style="display:grid;grid-template-columns: 1fr 1.5fr;">
+            <div class="image">
+              <%= cl_image_tag line_item.product.photos.first.key, :class => "card_image_product"%>
+            </div>
+            <div class="infos">
+              <%# <div class="infos-text"> %>
+                <h1>Product: <%= line_item.product.name %></h1>
+                <div class="btn-cart-options">
+                  <%= button_to line_item_add_path(:id => line_item), method: :post, :class => "btn-size" do %>
+                    <i class="fa-solid fa-plus"></i>
+                  <% end %>
+                  <p class="quantity"><%= line_item.quantity %></p>
+                  <%= button_to line_item_reduce_path(:id => line_item), method: :post, :class => "btn-size"  do %>
+                    <i class="fa-solid fa-minus"></i>
+                  <% end %>
+                  <%= button_to line_item_path(line_item), method: :delete, :class => "btn-size"  do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                </div>
+                <% if line_item.size.nil? %>
+                    <h6 style="margin-top: .8em">*please select a size to complete your order!</h6>
+                    <div class="btn-size-options">
+                      <%= button_to "P", line_item_change_size_path(:id => line_item, :size => "P"), method: :post, :class => "btn-size" %>
+                      <%= button_to "M", line_item_change_size_path(:id => line_item, :size => "M"), method: :post, :class => "btn-size" %>
+                      <%= button_to "G", line_item_change_size_path(:id => line_item, :size => "G"), method: :post, :class => "btn-size" %>
+                    </div>
+                <% end %>
+                <div class="description-prod">
+                    <p style="overflow-wrap:anywhere;"><%= line_item.product.description %></p>
+                    <p>Price: <%= number_to_currency(line_item.product.price) %></p>
+                  <% if line_item.size.present? %>
+                    <div class="resize">
+                      <p>Size: <%= line_item.size %></p>
+                      <%= button_to "chose a new size", line_item_change_size_path(:id => line_item, :size => nil), method: :post, :class => "btn-size" %>
+                    </div>
+                  <% end %>
+                    <p>Total Price: <%= number_to_currency(line_item.total_price) %></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="cart_proceed">
+      <div class="cart_controls">
+        <%= button_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, :class => "btn-cart-show" %>
+        <% if @cart.line_items.present? %>
+          <% if @cart.line_items.find_by(size: nil) == nil %>
+            <%= link_to "Proceed to checkout", new_order_path , :class => "btn-cart-show"%>
+          <% end %>
+        <% end %>
+      </div>
+      <h3 style="text-align:end">Sub total: <%= number_to_currency(@cart.sub_total) %></h3>
+    </div>
+  <% else %>
+    <h1 style="text-align:center"><%= link_to "click here", products_path %> to add a product to your cart</h1>
+  <% end %>
+</div>

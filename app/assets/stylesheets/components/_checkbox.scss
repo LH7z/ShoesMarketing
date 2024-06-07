@@ -1,0 +1,27 @@
+.checkbox {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 75px 0 15px;
+  align-items: baseline;
+}
+
+.checkbox a {
+  background-color: black;
+  font-size: 12px;
+  padding: 1em 1em;
+  border-radius: 10px;
+  width: 15%;
+  text-align: center;
+  color: white;
+  transition: background-color .5s, color .5s, text-decoration .5s ease-in-out;
+}
+
+.checkbox a:hover {
+  background-color: #f4f4f4;
+  color: black;
+  text-decoration: underline;
+}
+
+.margin-top {
+  margin-top: 100px;
+}

@@ -1,0 +1,22 @@
+.form-search {
+  display: flex;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  padding: 5px 5px;
+  gap: 10px;
+  width: 30%;
+}
+
+.input-search {
+  border: 0;
+  font-size: 15px;
+  width: 100%;
+}
+
+.input-search::placeholder {
+  font-weight: lighter;
+}
+
+.input-search:focus-visible{
+  outline: 0;
+}

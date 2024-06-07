@@ -1,25 +1,41 @@
- <div class="card-category-show">
-  <%= cl_image_tag @product.photo.key, :class => "card_image_show"%>
-  <div class="card_show_info">
-    <div class="card_show_title">
-      <h2>
-        <%= @product.name %>
-      </h2>
-      <p>
-          <%= @product.description %>
-      </p>
+  <div class="card-category-show">
+    <div class="card_image_show"  data-controller="carousel">
+      <div class="slider" data-carousel-target="slider">
+          <% @product.photos.each do |photo| %>
+            <div class="slide">
+              <%= cl_image_tag photo.key, :class => "image-prod", "data-target": "slide"%>
+            </div>
+          <% end %>
+        <button class="btn-carousel btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="btn-carousel btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <%# <div class="dots"> %>
+          <%# <% @product.photos.each do |photo| %>
+            <%# <i id="dots"  class="fa-solid fa-circle"></i> %>
+          <%# <% end %>
+        <%# </div> %>
+      </div>
     </div>
-    <div class="card_show_prices">
-      <p>
-        price:
-        $<%= @product.price %>
-      </p>
-      <p>
-        rating:
-        <% @product.rating.to_i.times do %>
-          <i class="fa-solid fa-star"></i>
-        <% end %>
-      </p>
+    <%# <%= cl_image_tag @product.photos :class => "card_image_show"%>
+    <div class="card_show_info">
+      <%# <div class="checkbox"> %>
+        <%# link_to "P", product_path(:size => "P") %>
+        <%# link_to "M", product_path(:size => "M") %>
+        <%# link_to "G", product_path(:size => "G") %>
+      <%# </div> %>
+      <div class="card_show_title">
+        <h2>
+          <%= @product.name %>
+        </h2>
+        <p>
+            <%= @product.description %>
+        </p>
+      </div>
+      <div class="card_show_prices">
+        <p>
+          price:
+          $<%= @product.price %>
+        </p>
+          <%= button_to "Add #{@product.name} to cart", line_items_path(:product_id => @product.id, :size => params[:size]),:class =>  "btn-cart" %>
+      </div>
     </div>
-  </div>
   </div>

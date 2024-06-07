@@ -1,14 +1,32 @@
-<div class="banner_product_2">
+<%# <div class="banner_product_2">
   <h1>Sneaker Shopping</h1>
   <h2>The best place to buy</h2>
-</div>
+</div> %>
+  <div class="checkbox">
+    <p>categories:</p>
+    <%= link_to "all", products_path %>
+    <%= link_to "T-shirt", products_path(:sort_cat => "T-shirt") %>
+    <%= link_to "Jeans", products_path(:sort_cat => "Jeans") %>
+    <%= link_to "Jacket", products_path(:sort_cat => "Jacket") %>
+    <%= link_to "Others", products_path(:sort_cat => "Other") %>
+  </div>
 
 <div class="banner_product">
 </div>
-
 
 <div class="cards">
   <% @products.each do |product| %>
     <%= render "product", product: product %>
   <% end %>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    The best place to buy <i class="fas fa-heart"></i>
+  </div>
 </div>

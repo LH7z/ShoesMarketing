@@ -1,0 +1,28 @@
+<div style="padding: 105px 25px 25px;">
+  <% if current_user.role == "admin" %>
+    <h2>All Orders</h2>
+  <% else %>
+    <h2>Your Ordes</h2>
+  <% end %>
+
+  <% @orders.each do |order| %>
+    <% if current_user.role == "admin" %>
+      <p>User:<%= order.user.nickname %> ID:<%= order.user.id %></p>
+    <% end %>
+    <p>Name: <%= order.name %></p>
+    <p>Email: <%= order.email %></p>
+    <p>Line Items: </p>
+    <p>Cart ID:<%= order.cart.id %></p>
+    <ul style="display:grid;grid-template-columns: 1.5fr 1fr ">
+      <% order.cart.line_items.each do |item| %>
+      <div class="fotos">
+        <%= cl_image_tag item.product.photos.first.key, :class => "card_image_product"%>
+      </div>
+      <div class="infos">
+        <li><%= item.quantity %> x <%= item.product.name %></li>
+        <li><%= item.size %></li>
+      </div>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

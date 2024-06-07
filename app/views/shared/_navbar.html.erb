@@ -1,9 +1,19 @@
 <div data-controller="scroll">
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" data-scroll-target="nav" data-action="scroll@window->scroll#scroll">
     <div class="container-fluid">
-      <%= link_to "#", class: "navbar-brand" do %>
-        <%= image_tag "data:image/png;base64,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" %>
+
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag("logomatheus.jpeg") %>
       <% end %>
+
+      <%= form_tag products_path,class: "form-search", method: :get do %>
+        <%= text_field_tag :query,
+                            params[:query],
+                            class: "input-search",
+                            placeholder: "Search for a product" %>
+        <%= image_submit_tag "search-b.svg"%>
+      <% end %>
+
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,17 +29,32 @@
               <%= link_to "Products", "/products", class: "nav-link" %>
             </li>
             <li class="nav-item dropdown">
-            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= cl_image_tag (current_user.photo.key), crop: :thumb, height: 40, class: "avatar", alt: "dropdown menu" %>
-            </a>
+              <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <% if current_user.photo.key.present? %>
+                  <%= cl_image_tag (current_user.photo.key), crop: :thumb, height: 40, class: "avatar", alt: "dropdown menu" %>
+                <% else %>
+                  <%= image_tag("avatarshoes.png", crop: :thumb, height: 40, class: "avatar", alt: "dropdown menu") %>
+                <% end %>
+              </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Shop Cart", "/shopcart", class: "dropdown-item" %>
+                <% if @current_cart %>
+                  <%= link_to "Shop Cart", cart_path(@current_cart), class: "dropdown-item" %>
+                <% end %>
+                <% if current_user.role == "admin" %>
+                  <%= link_to "all Orders", orders_path, class: "dropdown-item" %>
+                  <%= link_to "Add a product",  new_product_path, class: "dropdown-item" %>
+                <% else %>
+                  <%= link_to "Your Orders", orders_path, class: "dropdown-item" %>
+                <% end %>
                 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
               </div>
             </li>
           <% else %>
             <li class="nav-item">
               <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Products", "/products", class: "nav-link" %>
             </li>
           <% end %>
         </ul>

@@ -2,17 +2,19 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="carousel"
 export default class extends Controller {
-  static targets = ["items"]
+  static targets = ["item"]
   connect() {
-
-    const slides = document.querySelectorAll(".slide");
+    const slides = document.querySelectorAll(".image-prod");
+    const dots = document.querySelectorAll("#dots")
 
     slides.forEach((slide, indx) => {
-      slide.style.transform = `translateX(${indx * 100}%)`;
+
+      slide.style.transform = `translateY(${indx * 100}%)`;
     });
     let curSlide = 0;
 
     let maxSlide = slides.length - 1;
+
 
 // select next slide button
     const nextSlide = document.querySelector(".btn-next");
@@ -26,7 +28,7 @@ export default class extends Controller {
       }
 
       slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
       });
     });
 
@@ -41,10 +43,18 @@ export default class extends Controller {
         curSlide--;
       }
 
-      //   move slide by 100%
+        // move slide by 100%
       slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        slide.style.transform = `translateY(${100 * (indx - curSlide)}%)`;
       });
     });
+
+    console.log(dots[0]);
+
+    if (slides.length == 1) {
+      prevSlide.style.display = "none"
+      nextSlide.style.display = "none"
+    }
+
   }
 }
