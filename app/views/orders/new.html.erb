@@ -1,0 +1,21 @@
+<div style="padding-top: 105px">
+  <%= simple_form_for @order do |f| %>
+    <% @order.cart.line_items.each do |item| %>
+      <%= cl_image_tag item.product.photos.first.key, :class => "card_image_product"%>
+      <li><%= item.quantity %> x <%= item.product.name %></li>
+      <li>Size:<%= item.size %></li>
+    <% end %>
+    <p>
+      If you haven't added the size of your product yet click here
+      <%= link_to "Shop Cart", cart_path(@current_cart) %>
+    </p>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :name, autofocus: true %>
+    <%= f.input :email %>
+    <%= f.input :address %>
+    <%= f.input :pay_method %>
+    <%= f.button :submit %>
+  <% end %>
+
+</div>

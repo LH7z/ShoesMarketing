@@ -1,0 +1,58 @@
+
+#slide {
+  background: linear-gradient(to right, transparent, black), url(banner-camisas-2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+
+.slide-info {
+  margin: 235px 35vw 0;
+  color: #ffffff9c;
+  width: 56vw;
+}
+
+.slide-info h1 {
+  font-weight: bold;
+  font-size: 74px;
+  text-align: end;
+}
+
+.slide-info h2 {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: end;
+  overflow-wrap: anywhere;
+}
+
+#slide-2 {
+  background: linear-gradient(to left, transparent, black), url(banner-camisas.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide-2-info {
+  margin: 78px 8vw 230px;
+  color: #ffffff9c;
+  width: 56vw;
+}
+
+.slide-2-info h1 {
+  font-weight: bold;
+  font-size: 74px;
+
+}
+
+.slide-2-info h2 {
+  font-weight: bold;
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+
+#slide-3 {
+  background: linear-gradient(to right, transparent, black), url();
+  background-size: cover;
+  background-repeat: no-repeat;
+}

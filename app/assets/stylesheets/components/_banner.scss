@@ -5,28 +5,45 @@
   width: -webkit-fill-available;
 }
 
-
 .banner_product {
+  background-image: url(banner-logo.jpeg);
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 76vh;
+  height: 69vh;
   width: -webkit-fill-available;
 }
 
+.banner_home {
+  margin: 19.3vh auto;
+  width: fit-content;
+}
+
+.banner_home h1 {
+  font-weight: bold;
+  font-size: 74px;
+  margin: 0;
+}
+
+.banner_home h2 {
+  font-weight: lighter;
+  font-size: 25px;
+  margin: 0;
+}
+
+
 .banner_product_2 {
-  margin: 10vh auto;
+  margin:auto;
+  padding: 150px 0;
   width: fit-content;
 }
 
 .banner_product_2 h1 {
-  font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   font-size: 74px;
   margin: 0;
 }
 
 .banner_product_2 h2 {
-  font-family: 'DM Sans', sans-serif;
   font-weight: lighter;
   font-size: 25px;
   margin: 0;

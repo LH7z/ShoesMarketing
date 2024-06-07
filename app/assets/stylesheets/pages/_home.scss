@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  height: 100vh;
+}

@@ -18,6 +18,10 @@
   border-radius: 4px;
   background: #670BFF;
   transition: background 0.3s ease;
+  margin-top: 13px;
+  font-weight: lighter;
+  font-size: 18px;
+  padding: 9px 42px;
 }
 
 .btn-flat:hover {
@@ -38,4 +42,47 @@
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+.btn {
+  border: 1px solid #aeb1b3;
+}
+
+.btn-cart {
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: large;
+  border: none;
+}
+
+.btn-cart-show {
+  padding: 15px 40px;
+  font-size: large;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
+}
+
+a:hover {
+  color: black;
+}
+
+.btn-size-options {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
+
+.btn-size {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-cart-options {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  gap: 10px;
 }

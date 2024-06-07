@@ -4,7 +4,11 @@ class PagesController < ApplicationController
   def home
   end
 
-  def index
-    @highlights = Highlight.all
+  def shopcart
+    @user = current_user
+  end
+
+  def edit_profile
+    @user = current_user
   end
 end
