@@ -34,5 +34,14 @@ OLG Market Place é um projeto de e-commerce desenvolvido para estudo e prática
 
 ### Instalação
 
-1. Clone o repositório: git clone 
-2. cd 
+1. Clone o repositório: git clone git@github.com:LH7z/ShoesMarketing.git
+2. cd ShoesMarketing
+3. bundle install
+4. yarn install
+5. rails db:create
+6. rails db:migrate
+7. rails db:seed
+
+### User teste
+- email: user@example.com
+- senha: 123456
