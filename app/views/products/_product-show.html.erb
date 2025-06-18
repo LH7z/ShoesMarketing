@@ -3,7 +3,7 @@
       <div class="slider" data-carousel-target="slider">
           <% @product.photos.each do |photo| %>
             <div class="slide">
-              <%= cl_image_tag photo.key, :class => "image-prod", "data-target": "slide"%>
+              <%= image_tag photo, :class => "image-prod", "data-target": "slide"%>
             </div>
           <% end %>
         <button class="btn-carousel btn-next"><i class="fa-solid fa-arrow-right"></i></button>

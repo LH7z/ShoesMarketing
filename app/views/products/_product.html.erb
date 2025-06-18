@@ -1,6 +1,6 @@
 <a href="<%= product_path(product) %>">
   <div class="card-category-product">
-    <%= cl_image_tag product.photos.first.key, :class => "card_image_product"%>
+    <%= image_tag product.photos.first, :class => "card_image_product"%>
     <div class="card-product-infos">
       <div class="card_product_info">
         <p class="card-pro-t" >

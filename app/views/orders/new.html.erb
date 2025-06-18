@@ -1,7 +1,7 @@
 <div style="padding-top: 105px">
   <%= simple_form_for @order do |f| %>
     <% @order.cart.line_items.each do |item| %>
-      <%= cl_image_tag item.product.photos.first.key, :class => "card_image_product"%>
+      <%= image_tag item.product.photos.first, :class => "card_image_product"%>
       <li><%= item.quantity %> x <%= item.product.name %></li>
       <li>Size:<%= item.size %></li>
     <% end %>

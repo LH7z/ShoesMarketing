@@ -4,7 +4,7 @@
       <div class="cart">
         <div style="display:grid;grid-template-columns: 1fr 1.5fr;">
             <div class="image">
-              <%= cl_image_tag line_item.product.photos.first.key, :class => "card_image_product"%>
+              <%= image_tag line_item.product.photos.first, :class => "card_image_product"%>
             </div>
             <div class="infos">
               <%# <div class="infos-text"> %>

@@ -6,6 +6,7 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many_attached :photos
   has_many :line_items, dependent: :destroy
-  validates :photos, presence: true
+  # validates :photos, presence: true
+
   validates :categories, inclusion: { in: ["T-shirt" ,"Jeans" ,"Jacket" ,"Other"], message: "%{value} is not a valid categories" }, presence: true
 end
